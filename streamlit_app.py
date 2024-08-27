@@ -18,8 +18,10 @@ Insulin =  st.number_input('Insulin' , min_value=0.0 , max_value=100.0,value=1.0
 BMI =  st.number_input('BMI' , min_value=0.0 , max_value=100.0,value=1.0)
 DiabetesPedigreeFunction =  st.number_input('DiabetesPedigreeFunction' , min_value=0.0 , max_value=100.0,value=1.0)
 Age =  st.number_input('Age' , min_value=0.0 , max_value=100.0,value=1.0)
+BloodPressure =  st.number_input('BloodPressure' , min_value=0.0 , max_value=100.0,value=1.0)
+SkinThickness =  st.number_input('SkinThickness' , min_value=0.0 , max_value=100.0,value=1.0)
 
-output = model.predict([[Pregnancies,Glucose,Insulin,BMI,DiabetesPedigreeFunction,Age]])
+output = model.predict([[Pregnancies,Glucose,Insulin,BMI,DiabetesPedigreeFunction,Age,BloodPressure,SkinThickness]])
 
 #display the result
 st.write("diabetes patient : ",round(output[0],2))
